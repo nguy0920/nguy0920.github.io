@@ -1,0 +1,166 @@
+<!-- doctype html tells browser this document is HTML5 -->
+<!DOCTYPE html>
+<html>
+<!-- head is an essential part of a html document -->
+<head>
+	<!-- This is lable that shows up on the tab -->
+	<title>Vanessa Nguyen - Assignment 2</title>
+	<!-- This tag tells the browser which character set you are using -->
+	<meta charset="utf-8">
+	<!-- Keywords to tell the crawlers what is the keyword of your sit, which does not matter in this case because of the tags I have in the next meta tag -->
+	<meta name="keywords" content="HTML, HTML5, Advanced HTML, New Tags, Special Tags">
+	<!-- "no index" makes it so this page is not index and cannot be found -->
+	<!-- no follow tells the search engine to not follow this page -->
+	<meta name="robots" content="no index, nofollow">
+</head>
+<!-- body is another essential part of html -->
+<body>
+	<!-- Header tells the browser that this tag is rendered to be the highest priority -->
+	<header id="header">
+		<!-- H1 is the most important heading -->
+		<h1>Assignment 2</h1>
+	</header>
+	<!-- main is the main body of the html document -->
+	<main id="main">
+		<section id="table-section" class="amin-section">
+			<h2>Employee List</h2>
+			<table>
+				<!-- style allows us to customize the borders using CSS -->
+				<style>
+					table, th, td {
+						border: 1px solid black;
+						text-align: center;
+					}
+				</style>
+				<!-- thread defines the heading of the table -->
+				<thead>
+					<!-- tr is a table row tag -->
+					<tr>
+						<!-- tl is used in the thead tag to label the colomns -->
+						<th>Id</th>
+						<th>Name</th>
+						<th>email</th>
+					</tr>
+				</thead>
+
+				<!-- tbody is the main content/body of the table tag -->
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>John</td>
+						<td>john@fakemail.com</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td>sam</td>
+						<td>sam@fakemail.com</td>
+					</tr>
+
+					<tr>
+						<td>1</td>
+						<td>Bob</td>
+						<td>bob@fakemail.com</td>
+					</tr>
+
+					<tr>
+						<td>1</td>
+						<td>Jack</td>
+						<td>jack@fakemail.com</td>
+					</tr>
+
+					<tr>
+						<td>1</td>
+						<td>rob</td>
+						<td>Rob@fakemail.com</td>
+					</tr>
+				</tbody>
+
+				<tfoot>
+					<tr>
+						<td colspan="3"> All of the above are Division Heads
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+
+		<section id="images" class="main section">
+			<h2>Animals</h2>
+			<article>
+				<!-- figure is a semnatic tag used to display images -->
+				<figure>
+					<img src="assignment-2/img/elephant.jpg" alt="elephant image in figure" width="300" height="200">
+					<!-- figcaption is the child of figure to add caption to the image -->
+					<figcaption>This is an Elephant.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="assignment-2/img/lion.jpg" alt="lion image in figure" width="300" height="200">
+					<figcaption>This is a lion.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="assignment-2/img/snake.jpg" alt="snake image in figure" width="300" height="200">
+					<figcaption>This is a snake.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="assignment-2/img/whale.jpg" alt="whale image in figure" width="300" height="200">
+					<figcaption>This is a Whale.</figcaption>
+				</figure>
+
+				<figure>
+					<img src="assignment-2/img/hawk.jpg" alt="hawk image in figure" width="300" height="200">
+					<figcaption>This is a Hawk.</figcaption>		
+				</figure>
+
+			</article>
+		</section>
+
+		<section>
+			<article>
+			<h2>HTML Entities</h2>
+			<p>Non Breaking Space: &#160;</p>
+			<p>ampersand : &#38;</p>
+			<p>Pound : &#163;</p>
+			<p>Copyright : &#169;</p>
+			</article>
+		</section>
+
+		<section id="special-tags" class="main-section">
+			<h2>Special Tags</h2>
+			<article id="st-dl" class="special-tag">
+				<dl>
+					<dt>Coffee</dt>
+					<dd>-black hot drink</dd>
+					<dt>Milk</dt>
+					<dd>-white cold drink</dd>
+				</dl>
+			</article>
+
+			<article id="st-abbr" class="special-tag">
+				<p> <abbr title="Hypertext Markup Language">HTML</abbr ></p>
+				<p> <abbr title="Cascading Style Sheets">CSS</abbr ></p>
+			</article>
+
+			<article class="special-tag" id="details">
+
+
+				<details>
+					<summary>What is a mobile Phone?</summary>
+					<p>A mobile phone, cell phone or hand phone, sometimes shortened to simply mobile, cell or just phone, is a portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area.</p>
+				</details>
+			</article>
+		<section>
+			<h2>Hidden Comment:</h2>
+			<!-- I actually debated for a while if I should put the hidden comment in <main> or <footer>. Honestly, I'm still not sure because the footer looks empty, so I hope I made the right choice-->
+		</section>
+	</main>
+	<!-- This is a structural tag to define the footer of  the html document -->
+	<footer id="footer">
+		
+	</footer>
+
+</body>
+</html>
