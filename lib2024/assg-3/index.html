@@ -8,34 +8,175 @@
 <body>
 	<div id="wrapper" class="wrapper">
 		<section id="html-forms" class="main-section">
+			<!-- Didn't think I needed a heading, but the HTML validator suggested it.-->
+			<h1> HTML FORMS </h1>
+			<!-- form requies the action and method input for it to be valid
+			action is the page where the data goes when its submitted
+			medthod is how the data reaches its destination
+			get is not a secure way to send information because the data is not encypted, but can be changed to "post" if so required -->
 			<form action="submission.php" method="get">
 				<div id="fn-container" class="form-elm">
+					<!-- Because we are using the input tag, a label must accompany it -->
+					<!-- "text" is an imput recognized by HTML and can be used with a placeholder -->
+					<!-- the placeholder does not get submitted to the server -->
+					<!-- the required attribute makes sure the feilds are filled out and the user cannot submitted the form without the field being filled -->
 					<label for="FirstName">First Name:</label>
-					<input type="text" name="FirstName" id="FirstName" placeholder="Please Type First Name">
+					<input type="text" name="FirstName" id="FirstName" placeholder="Please Type First Name" required>
 				</div>
+
 				<div id="ln-container" class="form-elm">
 					<label for="LastName">Last Name:</label>
-					<input type="text" name="LastName" id="LastName" placeholder="Plase Type Last Name">
+					<input type="text" name="LastName" id="LastName" placeholder="Plase Type Last Name" required>
 				</div>
+
 				<div id="email-container" class="form-elm">
 					<label for="Email">Email:</label>
-					<input type="Email" name="Email" id="Email" placeholder="example@algonquinlive.com">
+					<!-- email is an imput recognised by html and makes sure the field is filled out in proper email format. such as it contains an "@" and a ".com/.ca/org" -->
+					<input type="email" name="Email" id="Email" placeholder="example@algonquinlive.com">
 				</div>
+
 				<div id="pass-container" class="form-elm">
 					<label for="pass">Password:</label>
+					<!-- password is an input type reognized by html and is used to make password inputs -->
+					<!-- the value written is therefore hidden and shows dots -->
 					<input type="Password" name="pass" id="pass" required>
 				</div>
+
 				<div id="sum-container" class="form-elm">
 					<label for="summary">Introduction:</label>
+					<!-- textarea lets user submit information that is more than one line by preserving linebreaks while submitted to the server -->
 					<textarea name="summary" id="summary" placeholder="Introduce Yourself">
 					</textarea>
 				</div>
 
 				<div id="st-container" class="form-elm">
+					<!-- date is an input recognized by html and pulls up the calendar for users to choose specific dates *this does not work with safari -->
 					<label for="dte">Date of Birth:</label>
-					<input type="date" name="dte" id="dte" placeholder="yyyy-mm-dd" value=""><br>
+					<input type="date" name="dte" id="dte"><br>
+					<label for="num">Mobile Number</label>
+					<!-- number is an input recognized by html and requires user to input number characters -->
+					<!-- min and max are set to 9 digits because those are the number of digits in phone numbers -->
+					<input type="number" id="num" name="num" min="10000000000" max="9999999999">
 				</div>
+
+				<!-- fieldset creates a segment inside a form -->
+				<!-- a neat way to create a group of input type and displays them in a box -->
+				<!-- fieldset is readt by seo crawlers as a whole which means the values of the fieldset is used to determine the overal rank of the page -->
+				<fieldset>
+					<!-- legend is the title of a fieldset -->
+					<legend>Gender</legend>
+					<div id="radio-container" class="form-elm">
+						<label for="male">
+							<!-- radio input are signular value checkboxes -->
+							<!-- you can only select one or the other -->
+							<!-- checked means that this attribute is checked by defeault -->
+							<input type="radio" name="like-form" id="male" value="male" checked>
+							Male
+						</label>
+						<label for="female">
+							<input type="radio" name="like-form" id="female" value="female">
+						Female
+						</label>
+						<!-- in 2021 we acknowledge that there are more than two genders -->
+						<label for="other">
+							<input type="radio" name="like-form" id="other" value="other">
+							Other/Non-Binary
+						</label>
+					</div>
+				</fieldset>
+				<div id="ad-container" class="form-elm">
+					<label for="address">Address:</label>
+					<input type="text" name="address" id="address" placeholder="## Street Name St." required>
+				</div>
+
+				<div id="city-container" class="form-elm">
+					<label for="City">City:</label>
+					<input type="text" name="City" id="City" placeholder="City Name" required>
+				</div>
+
+				<div id="province-container" class="form-elm">
+					<label for="Province">Province/Territory:</label>
+					<!-- select elements create dropdowns in html -->
+					<!-- select comes paited with <options> which are the choices that show up in the dropdown menu -->
+					<select id="Province" name="Province">
+						<!-- optgroup creates groups in the dropdown element -->
+						<optgroup label="Territories">
+							<option value="Northwest_Territories">Northwest Territories</option>
+							<option value="Nunavut">Nunavut</option>
+							<option value="Yukon">Yukon</option>
+						</optgroup>
+						<optgroup label="Provinces">
+							<option value="British_Columbia">British Columbia</option>
+							<option value="Alberta">Alberta</option>
+							<option value="Saskatchewan">Saskatchewan</option>
+							<option value="Manibota">Manitoba</option>
+							<!-- selected attributed makes option selected by default -->
+							<option value="Ontario" selected>Ontario</option>
+							<option value="Quebec">Quebec</option>
+							<option value="Newfoundland_and_Labrador">Newfoundland and Labrador</option>
+							<option value="New_Brunswick">New Brunswick</option>
+							<option value="Nova_Scotia">Nova Scotia</option>
+							<option value="PEI">PEI</option>
+						</optgroup>
+						<optgroup label="Other">
+							<option value="Other">Other</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div id="country-container" class="form-elm">
+					<label for="Country">Country:</label>
+					<select id="Country" name="Country">
+						<option value="Canada" selected>Canada</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+
+				<div id="postal-container" class="form-elm">
+					<label for="postal">Postal Code:</label>
+					<input type="text" name="postal" id="postal" placeholder="A1A 1A1">
+				</div>
+
+				<fieldset>
+					<legend>Hobbies/Interests</legend>
+					<div id="hobbies-container" class="form-elm">
+						<label for="reading">Reading</label>
+						<!-- input checkbox is used to create checkboxes -->
+						<!-- unique ids are given to their unique identification -->
+						<input type="checkbox" name="hobbies" id="reading" value="reading">
+						<label for="writing">Writing</label>
+						<input type="checkbox" name="hobbies" id="writing" value="writing">
+						<label for="drawing">Drawing</label>
+						<input type="checkbox" name="hobbies" id="drawing" value="drawing">
+						<label for="knitting">Knitting</label>
+						<input type="checkbox" name="hobbies" id="knitting" value="knitting">
+						<label for="photography">Photography</label>
+						<input type="checkbox" name="hobbies" id="photography" value="photography">
+						<label for="gardening">Gardening</label>
+						<input type="checkbox" name="hobbies" id="gardening" value="gardening"><br>
+
+						<label for="hiking">Hiking</label>
+						<input type="checkbox" name="hobbies" id="hiking" value="hiking">
+						<label for="soccer">Soccer</label>
+						<input type="checkbox" name="hobbies" id="soccer" value="soccer">
+						<label for="football">Football</label>
+						<input type="checkbox" name="hobbies" id="football" value="football">
+						<label for="tennis">Tennis</label>
+						<input type="checkbox" name="hobbies" id="tennis" value="tennis">
+						<label for="basketball">Basketball</label>
+						<input type="checkbox" name="hobbies" id="basketball" value="basketball">
+						<label for="volleyball">Volleyball</label>
+						<input type="checkbox" name="hobbies" id="volleyball" value="volleyball">
+					</div>
+				</fieldset>
+				<div id="url-container" class="form-elm">
+						<label for="ur">Enter a URL:</label>
+						<input type="url" name="ur" id="ur">
+					</div>
+
+				<!-- reset button resets the fomr value without needed to refresh the page -->
 				<button type="reset">Reset</button>
+				<!-- submit button submits the form and html elements which are automatically validated by the browser -->
 				<button type="submit">Submit</button>
 			</form>
 		</section>
