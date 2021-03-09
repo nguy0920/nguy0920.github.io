@@ -1,0 +1,46 @@
+<!-- doctype html tells browser this document is HTML5 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This is lable that shows up on the tab -->
+	<title>Vanessa Nguyen - Assignment 3</title>
+</head>
+<body>
+	<div id="wrapper" class="wrapper">
+		<section id="html-forms" class="main-section">
+			<form action="submission.php" method="get">
+				<div id="fn-container" class="form-elm">
+					<label for="FirstName">First Name:</label>
+					<input type="text" name="FirstName" id="FirstName" placeholder="Please Type First Name">
+				</div>
+				<div id="ln-container" class="form-elm">
+					<label for="LastName">Last Name:</label>
+					<input type="text" name="LastName" id="LastName" placeholder="Plase Type Last Name">
+				</div>
+				<div id="email-container" class="form-elm">
+					<label for="Email">Email:</label>
+					<input type="Email" name="Email" id="Email" placeholder="example@algonquinlive.com">
+				</div>
+				<div id="pass-container" class="form-elm">
+					<label for="pass">Password:</label>
+					<input type="Password" name="pass" id="pass" required>
+				</div>
+				<div id="sum-container" class="form-elm">
+					<label for="summary">Introduction:</label>
+					<textarea name="summary" id="summary" placeholder="Introduce Yourself">
+					</textarea>
+				</div>
+
+				<div id="st-container" class="form-elm">
+					<label for="dte">Date of Birth:</label>
+					<input type="date" name="dte" id="dte" placeholder="yyyy-mm-dd" value=""><br>
+				</div>
+				<button type="reset">Reset</button>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+	</div>
+
+
+</body>
+</html>
