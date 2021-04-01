@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Style Schema</title>
+</head>
+<body>
+	<header id=header>
+		<h1>Title of Page</h1>
+	</header>
+
+	<main id=main>
+		<section id="target-screen" class="main-section">
+			<h3>Target Screen:</h3>
+			<p>Desktop (960px) </p>
+			<p><b>Prototype Image Link: <img src="img/webpage-mock-up.jpg"></b></p>
+		</section>
+		<section id="Dimensions" class="main-section">
+			<h3>Dimensions:</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Element</th>
+						<th>Width</th>
+						<th>Height</th>
+						<th>Parent</th>
+					</tr>
+				</thead>
+
+				<style>
+					table, th, td {
+						text-align: left;
+					}
+				</style>
+
+				<tbody>
+					<tr>
+						<td>Page</td>
+						<td>100%</td>
+						<td>Auto</td>
+						<td>N/A</td>
+					</tr>
+
+					<tr>
+						<td>Header</td>
+						<td>960px</td>
+						<td>auto</td>
+						<td>Page</td>
+					</tr>
+
+					<tr>
+						<td>Main</td>
+						<td>100%</td>
+						<td>Auto</td>
+						<td>Page</td>
+					</tr>
+
+					<tr>
+						<td>Article - Main Content</td>
+						<td>60%</td>
+						<td>Auto</td>
+						<td>Main</td>
+					</tr>
+
+					<tr>
+						<td>Aside</td>
+						<td>30%</td>
+						<td>Auto</td>
+						<td>Main</td>
+					</tr>
+
+					<tr>
+						<td>Article - Secondary Content</td>
+						<td>100%</td>
+						<td>Auto</td>
+						<td>Main</td>
+					</tr>
+
+
+					<tr>
+						<td>Footer</td>
+						<td>100%</td>
+						<td>Auto</td>
+						<td>Page</td>
+					</tr>
+
+
+					<tr>
+						<td>Image</td>
+						<td>30%</td>
+						<td>Auto</td>
+						<td>Aside</td>
+					</tr>
+
+
+					<tr>
+						<td>Figures (3)</td>
+						<td>20%</td>
+						<td>Auto</td>
+						<td>Article - Secondary Content</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="Colors" class="main-section">
+			<h3>Colors:</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Color</th>
+						<th>Used for</th>
+						<th>Used as</th>
+						<th>Hex Value</th>
+						<th>RGB Values</th>
+						<th>Opacity</th>
+					</tr>
+				</thead>
+
+				<style>
+					table, th, td {
+						text-align: left;
+					}
+				</style>
+
+				<tbody>
+					<tr>
+						<td>Black</td>
+						<td>Text</td>
+						<td>Primary</td>
+						<td>#000000</td>
+						<td>(0,0,0)</td>
+						<td>1</td>
+					</tr>
+
+					<tr>
+						<td>Green</td>
+						<td>Background</td>
+						<td>Primary</td>
+						<td>#7cc76</td>
+						<td>(124, 197, 118)</td>
+						<td>1</td>
+					</tr>
+
+					<tr>
+						<td>Blue</td>
+						<td>Navigation</td>
+						<td>Accent</td>
+						<td>#6dcff6</td>
+						<td>(109,207,246)</td>
+						<td>1</td>
+					</tr>
+
+					<tr>
+						<td>White</td>
+						<td>Background</td>
+						<td>Primary</td>
+						<td>#ffffff</td>
+						<td>(255,255,255)</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="Background Image" class="main-section">
+			<h3>Background Images:</h3>
+			<ul>
+				<li> URL: <a href="https://www.toptal.com/designers/subtlepatterns/double-bubble-outline-pattern/">https://www.toptal.com/designers/subtlepatterns/double-bubble-outline-pattern/</a></li>
+				<li>Style: Double Bubble Outline Pattern</li>
+			</ul>
+		</section>
+	</main>
+
+</body>
+</html>
