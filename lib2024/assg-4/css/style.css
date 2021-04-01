@@ -1,0 +1,142 @@
+/*CSS document is used to add external styles for the HTML document*/
+/*The externsion of this file must be .css */
+
+/*this is used to define the character set of the CSS file*/
+@charset "utf-8";
+
+body {
+	background-image: url("../img/bubble.png");
+	margin:auto;
+	max-width: 960px;	
+	background-color: #ffffff
+	}
+
+	header {
+	max-width: 960px;
+	 background: #7cc576;
+	 padding: 1%;
+	 margin-left: 3%;
+	 margin-right: 3%;
+	}
+
+	h1 {
+		padding-left: 25%;
+		font-size: 40px
+		
+	}
+	.logo {
+		float: left;
+		width: 16%;
+	}
+
+	.main-nav-container {
+		clear: left;
+		margin-top: 7%;
+		margin-bottom: 2%;
+		text-align: center;
+	}
+
+
+.main-nav-container li {
+	text-align: center;
+	display: inline-block;
+	margin-left: 3%;
+	margin-right: 3%;
+
+}
+
+.main-nav-container li a {
+	display: block;
+	font-size: 20px;
+	padding: 15px 50px 15px 50px;
+	background-color: #6dcff6;
+	color: black;
+	text-align: center;
+
+}
+
+	main {
+		background-image:
+	}
+
+	.main-content {
+		float: left;
+		font-size: 17px;
+		width: 60%;
+		margin-left: 4%;
+	}
+
+	.main-content h2{
+		font-size: 30px;
+	}
+
+	.sidebar {
+		float: right;
+		width: 30%;
+		margin-right: 3%;
+	}
+
+	.sidebar-container {
+		margin-top: 25%;
+	}
+
+	.sideimg {
+		width: 100%;
+	}
+
+	.sidebar-container h3 {
+		font-size: 22px;
+	}
+
+	.sidebar-container p{
+		font-size: 19px;
+	}
+
+
+	.secondary-content {
+		clear: both;
+		width: 100%;
+		margin-left: 2%;
+		margin-right: 0%;
+	}
+
+	.secondary-content h3 {
+		font-family: 22px;
+	}
+
+	.image-gallery img {
+		float: left;
+		width: 100%;
+	}
+
+	.image-gallery figure {
+		float: left;
+		text-align: center;
+		width: 20%;
+		margin-left: 2%;
+		margin-right: 11%;
+	}
+
+	footer{
+		clear: both;
+		background: #7cc576;
+		height:120px;
+	}
+
+	footer p{
+		margin-left: 3%;
+	}
+
+	footer div {
+		padding:2%;
+	}
+
+	.footer-nav {
+		float: right;
+		top:10px;
+	}
+
+	.footer-nav li {
+		display: inline-block;
+	}
+
