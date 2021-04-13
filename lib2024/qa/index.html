@@ -158,7 +158,7 @@
 				Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px. 
 			</p>
 			<p>
-				<strong>Ans: </strong>
+				<strong>Ans: </strong></p>
 				<div class="element">
 					<p>example </p>
 				</div>
@@ -176,6 +176,7 @@
 
 					.element p {
 						position: absolute;
+						color: white;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%,-50%);
@@ -190,10 +191,11 @@
 
 			</p>
 			<p>
-				<strong>Ans:</strong>
+				<strong>Ans:</strong> 
 			
 
 				<div class="spin"></div>
+
 
 				<style type="text/css">
 
@@ -202,12 +204,15 @@
 				border-radius: 5%;
 				width: 200px;
 				height: 200px;
-				animation: spin 5s linear infinite;
+				animation-name: spin;
+				animation-duration: 4000ms;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
 				}
 
 				@keyframes spin {
-				0% {transform: rotate (0deg);}
-				100% {transform: rotate (360deg);}
+				from {transform: rotate(0deg);}
+				to {transform: rotate(360deg);}
 
 				}
 
@@ -234,13 +239,13 @@
 					border-radius: 20%;
 					width: 200px;
 					height: 200px;
-					animation: 0.5 linear;
+					animation: rotate-me 0.5s linear;
 					animation-iteration-count: 5;
-					animation-duration: 5s;
-			}
-				@keyframes rotate {
-					from {transform: rotate (0deg);}
-					to {transform: rotate (360deg);}
+					
+				}
+				@keyframes rotate-me {
+					0% {transform: rotate(0deg);}
+					100% {transform: rotate(360deg);}
 				}
 
 
@@ -255,7 +260,13 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				alert{element id="I love Javascript"}
+				window.alert("I love JavaScript") <br><br>
+				Example: <br>
+				<button onclick="example()">Click Me!</button>
+
+				<script type="text/javascript">
+					function example() {alert ("I love JavaScript")}
+				</script>
 			</p>
 		</li>
 		<!-- Qus 17 -->
@@ -265,8 +276,13 @@
 				How would you fade out an element with id "fade-me" after a delay of 300ms using JQuery?
 			</p>
 			<p>
-				<strong>Ans: </strong>
-				
+				<strong>Ans: </strong> <br>
+
+				< script > <br>
+					$("button").click(function(){ <br>
+						$("#fadeout").fadeout().delay(300); <br>
+					});
+				< /script >
 		</p></li>
 		<!-- Qus 18 -->
 		<li>
@@ -276,7 +292,18 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Ans for Qus 2
+				<br>
+				For JavaScript: <br>
+				function get_selection () { <br>
+				var text = ''; <br>
+			} <br>
+
+				document.getElementbyId("my-class").onclick= get_selection;
+				<br><br>
+				For JQuery: <br>
+				document.querySelectorAll('my-class');
+
+			}
 			</p>
 		</li>
 		<!-- Qus 19 -->
@@ -286,10 +313,27 @@
 				Give an example of input field that takes phone number with format "123-456-7890"?
 			</p>
 			<p>
-				<strong>Ans: </strong>
-				<input type="tel" pattern="\d{3}[\-}d{3}[|-]|d{4}">
+				<strong>Ans: </strong> </p>
+				<label for="phone">Phone Number:</label>
+				<input id="phone" type="tel" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+				<script type="text/javascript">
+					function phoneNumberCheck(phoneNumber)
+					{
+   					var regEx = ^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4};
+   						if(phoneNumber.value.match(regEx))
+    				 	{
+      					return true;
+     					}
+   					else
+     					{
+     				alert("Please enter a valid phone number.");
+     				return false;
+     					}
+				</script>
+
 				
-		</p></li>
+		</li>
 		<!-- Qus 20 -->
 		<li>
 			<p>
