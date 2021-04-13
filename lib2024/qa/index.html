@@ -159,20 +159,60 @@
 			</p>
 			<p>
 				<strong>Ans: </strong>
-				
+				<div class="element">
+					<p>example </p>
+				</div>
+
+				<style type="text/css">
+					.element {
+						margin: 0;
+						border: 2px black solid;
+						background-color: pink;
+						position: relative;
+						width: 200px;
+						height: 200px;
+
+					}
+
+					.element p {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%,-50%);
+					}
+				</style>
 		</p></li>
 		<!-- Qus 14 -->
 		<li>
 			<p>
 				<strong>Qus:</strong>
+				Create CSS keyframes block called "spin" that rotates an element. 
 
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Create CSS keyframes block called "spin" that rotates an element. 
-			</p>
-			<p>
-				<strong>Ans for Qus 2</strong>
+			
+
+				<div class="spin"></div>
+
+				<style type="text/css">
+
+				.spin {
+				border: 5px solid pink;
+				border-radius: 5%;
+				width: 200px;
+				height: 200px;
+				animation: spin 5s linear infinite;
+				}
+
+				@keyframes spin {
+				0% {transform: rotate (0deg);}
+				100% {transform: rotate (360deg);}
+
+				}
+
+			</style>
+
 			</p></li>
 		<!-- Qus 15 -->
 		<li>
@@ -184,6 +224,27 @@
 			</p>
 			<p>
 				<strong>Ans: </strong>
+
+				<div class="rotate-me"></div>
+
+				<style type="text/css">
+
+				.rotate-me {
+					border: 5px solid pink;
+					border-radius: 20%;
+					width: 200px;
+					height: 200px;
+					animation: 0.5 linear;
+					animation-iteration-count: 5;
+					animation-duration: 5s;
+			}
+				@keyframes rotate {
+					from {transform: rotate (0deg);}
+					to {transform: rotate (360deg);}
+				}
+
+
+		</style>
 				
 		</p></li>
 		<!-- Qus 16 -->
@@ -194,7 +255,7 @@
 			</p>
 			<p>
 				<strong>Ans:</strong>
-				Ans for Qus 2
+				alert{element id="I love Javascript"}
 			</p>
 		</li>
 		<!-- Qus 17 -->
@@ -226,6 +287,7 @@
 			</p>
 			<p>
 				<strong>Ans: </strong>
+				<input type="tel" pattern="\d{3}[\-}d{3}[|-]|d{4}">
 				
 		</p></li>
 		<!-- Qus 20 -->
